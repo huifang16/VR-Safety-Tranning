@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FireBrigadePhone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FireBrigadePhone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TubHandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\_course library\\scripts\\actions\\vibratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\_course library\\scripts\\actions\\vibratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TubHandle.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TubHandle.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TubHandle.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T00:51:56.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VibrateController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
+              "RelativeDocumentMoniker": "Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
+              "RelativeToolTip": "Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:55:11.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FireBrigadePhone.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FireBrigadePhone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FireBrigadePhone.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FireBrigadePhone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FireBrigadePhone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:56:35.756Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
