@@ -5,9 +5,13 @@ using UnityEngine.VFX;
 public class StoryManager : MonoBehaviour
 {
     public static StoryManager Instance;
-    
 
-    public UnityEvent<string> OnUIPrompt;
+    public StoryState currentState;
+    public bool doorClosedBehind = false;
+
+    public UnityEvent<StoryState> OnStateChanged;
+    public UnityEvent<string>     OnUIPrompt;
+    public UnityEvent<string>     OnPlayerDied;
 
 
     void Awake()
@@ -22,8 +26,9 @@ public class StoryManager : MonoBehaviour
     
     public void SetState(StoryState state)
     {
+        currentState = state;
+        OnStateChanged?.Invoke(state);
         HandleState(state);
-        
     }
     
     void HandleState(StoryState state)
@@ -37,14 +42,14 @@ public class StoryManager : MonoBehaviour
                 OnUIPrompt?.Invoke("Nothing is cooking here.\nThe smell isn't coming from the kitchen.");
                 break;
             case StoryState.SmellFromDoor:
-                VFXManager.Instance.ShowSmoke("FrontDoor");
-                OnUIPrompt?.Invoke("Wait - smoke is seeping through the gap at the bottom of the door!");
+                // VFXManager.Instance.ShowSmoke("FrontDoor");
+                OnUIPrompt?.Invoke("Wait - the smoke is not coming from the kitchen, the smoke is coming from front door!");
                 break;
             case StoryState.TouchTest:
                 OnUIPrompt?.Invoke("Do a touch test.\nCheck if the door handle feels hot.");
                 break;
             case StoryState.OpenDoor:
-                VFXManager.Instance.ShowSmoke("Hallway");
+                // VFXManager.Instance.ShowSmoke("Hallway");
                 OnUIPrompt?.Invoke("The hallway is hazy with smoke.\nYou can see the green \"Keluar\" sign ahead");
                 break;
              case StoryState.InvestigateNeighbour:
@@ -80,6 +85,23 @@ public class StoryManager : MonoBehaviour
                 // UIManager handles death screen
                 break;
         }
+        Debug.Log("Story State Change");
     }
 
+    
+
+    // Inspector-callable wrappers
+    public void GoToLivingRoom()           => SetState(StoryState.LivingRoom);
+    public void GoToCheckKitchen()         => SetState(StoryState.CheckKitchen);
+    public void GoToSmellFromDoor()        => SetState(StoryState.SmellFromDoor);
+    public void GoToTouchTest()            => SetState(StoryState.TouchTest);
+    public void GoToOpenDoor()             => SetState(StoryState.OpenDoor);
+    public void GoToInvestigateNeighbour() => SetState(StoryState.InvestigateNeighbour);
+    public void GoToNeighbourDead()        => SetState(StoryState.NeighbourDead);
+    public void GoToCrawlHallway()         => SetState(StoryState.CrawlHallway);
+    public void GoToStairwell1()           => SetState(StoryState.Stairwell1);
+    public void GoToBacktrack()            => SetState(StoryState.Backtrack);
+    public void GoToStairwell2()           => SetState(StoryState.Stairwell2);
+    public void GoToSafeZone()             => SetState(StoryState.SafeZone);
+    public void GoToPlayerDead()           => SetState(StoryState.PlayerDead);
 }
