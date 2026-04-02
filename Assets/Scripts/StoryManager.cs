@@ -56,18 +56,18 @@ public class StoryManager : MonoBehaviour
                 OnUIPrompt?.Invoke("Smoke is coming from your neighbour's door.\nDo you investigate?");
                 break;
             case StoryState.NeighbourDead:
-                VFXManager.Instance.ShowFire("NeighbourRoom");
+                // VFXManager.Instance.ShowFire("NeighbourRoom");
                 OnUIPrompt?.Invoke("The fire is far too big to fight.\nRun — now!");
                 break;
             case StoryState.CrawlHallway:
-                VFXManager.Instance.SetSmokeIntensity("Hallway", 0.9f);
+                // VFXManager.Instance.SetSmokeIntensity("Hallway", 0.9f);
                 OnUIPrompt?.Invoke("The smoke is thick and choking.\nStay low — crawl to the stairwell.");
                 break;
             case StoryState.Stairwell1:
                 OnUIPrompt?.Invoke("Smoke is small.\nMaybe we can go through?");
                 break;
             case StoryState.Stairwell1Dead:
-                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.5f);
+                // VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.5f);
                 OnUIPrompt?.Invoke("Heavy smoke and heat below.\nSeek an alternative route?");
                 break;
             case StoryState.Backtrack:
@@ -75,11 +75,11 @@ public class StoryManager : MonoBehaviour
                 break;
             case StoryState.Stairwell2:
                 OnUIPrompt?.Invoke("This stairwell seems clear... keep moving.");
-                VFXManager.Instance.StartSmokeRamp("Stairwell2");
+                // VFXManager.Instance.StartSmokeRamp("Stairwell2");
                 break;
             case StoryState.SafeZone:
                 OnUIPrompt?.Invoke("You successfully escaped!");
-                VFXManager.Instance.ShowOutdoorChaos();
+                // VFXManager.Instance.ShowOutdoorChaos();
                 break;
             case StoryState.PlayerDead:
                 // UIManager handles death screen
@@ -100,6 +100,7 @@ public class StoryManager : MonoBehaviour
     public void GoToNeighbourDead()        => SetState(StoryState.NeighbourDead);
     public void GoToCrawlHallway()         => SetState(StoryState.CrawlHallway);
     public void GoToStairwell1()           => SetState(StoryState.Stairwell1);
+    public void GoToStairwell1Dead()       => SetState(StoryState.Stairwell1Dead);
     public void GoToBacktrack()            => SetState(StoryState.Backtrack);
     public void GoToStairwell2()           => SetState(StoryState.Stairwell2);
     public void GoToSafeZone()             => SetState(StoryState.SafeZone);
