@@ -38,29 +38,37 @@ public class StoryManager : MonoBehaviour
             case StoryState.LivingRoom:
                 OnUIPrompt?.Invoke("Somethign smells like it's burning...\nCheck the kitchen.");
                 break;
-            case StoryState.CheckKitchen:
-                OnUIPrompt?.Invoke("Nothing is cooking here.\nThe smell isn't coming from the kitchen.");
-                break;
+            // case StoryState.CheckKitchen:
+            //     OnUIPrompt?.Invoke("Nothing is cooking here.\nThe smell isn't coming from the kitchen.");
+            //     break;
             case StoryState.SmellFromDoor:
-                // VFXManager.Instance.ShowSmoke("FrontDoor");
+                VFXManager.Instance.ShowSmoke("FrontDoor");
                 OnUIPrompt?.Invoke("Wait - the smoke is not coming from the kitchen, the smoke is coming from front door!");
                 break;
             case StoryState.TouchTest:
                 OnUIPrompt?.Invoke("Do a touch test.\nCheck if the door handle feels hot.");
                 break;
-            case StoryState.OpenDoor:
-                // VFXManager.Instance.ShowSmoke("Hallway");
-                OnUIPrompt?.Invoke("The hallway is hazy with smoke.\nYou can see the green \"Keluar\" sign ahead");
-                break;
+            // case StoryState.OpenDoor:
+            //     OnUIPrompt?.Invoke("The hallway is hazy with smoke.\nYou can see the green \"Keluar\" sign ahead");
+            //     break;
              case StoryState.InvestigateNeighbour:
+                VFXManager.Instance.DisableSmoke("FrontDoor");
+                VFXManager.Instance.ShowSmoke("NeighbourRoom");
+                VFXManager.Instance.ShowSmoke("HallwayLeft");
+                VFXManager.Instance.ShowSmoke("HallwayRight");
+                VFXManager.Instance.SetSmokeIntensity("HallwayLeft", 0.3f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayRight", 0.3f);
                 OnUIPrompt?.Invoke("Smoke is coming from your neighbour's door.\nDo you investigate?");
                 break;
             case StoryState.NeighbourDead:
-                // VFXManager.Instance.ShowFire("NeighbourRoom");
+                VFXManager.Instance.ShowFire("NeighbourRoom");
+                VFXManager.Instance.SetSmokeIntensity("HallwayLeft", 0.7f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayRight", 0.9f);
                 OnUIPrompt?.Invoke("The fire is far too big to fight.\nRun — now!");
                 break;
             case StoryState.CrawlHallway:
-                // VFXManager.Instance.SetSmokeIntensity("Hallway", 0.9f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayLeft", 0.7f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayRight", 0.9f);
                 OnUIPrompt?.Invoke("The smoke is thick and choking.\nStay low — crawl to the stairwell.");
                 break;
             case StoryState.Stairwell1:
@@ -85,7 +93,7 @@ public class StoryManager : MonoBehaviour
                 // UIManager handles death screen
                 break;
         }
-        Debug.Log("Story State Change");
+        Debug.Log("Story State Change: " + state);
     }
 
     

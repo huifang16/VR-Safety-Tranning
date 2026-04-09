@@ -28,21 +28,41 @@ public class VFXManager : MonoBehaviour {
 
     public void ShowSmoke(string zoneId) {
         if (_zones.TryGetValue(zoneId, out var z))
+        {
             z.particles.Play();
+        }
+    }
+    
+    public void DisableSmoke(string zoneId)
+    {
+        if (_zones.TryGetValue(zoneId, out var z))
+        {
+            z.particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
+        
     }
 
-    public void SetSmokeIntensity(string zoneId, float t) {
-        if (!_zones.TryGetValue(zoneId, out var z)) return;
+    public void SetSmokeIntensity(string zoneId, float intensity) {
+        if (!_zones.TryGetValue(zoneId, out var z))
+        {
+            Debug.LogError("no smoke found");
+            return;
+        }
+        
+        intensity = Mathf.Clamp01(intensity);
         var main = z.particles.main;
-        main.startColor = new ParticleSystem.MinMaxGradient(
-            new Color(0.5f, 0.5f, 0.5f, t));
+        
+        float v = Mathf.Lerp(0.1f, 0.9f, intensity);
+        Color smokeColor = new Color(v, v, v, v);
+        main.startColor = smokeColor;
     }
 
     public void ShowFire(string zoneId) {
-        neighbourFireVFX.transform.position = 
-            _zones[zoneId].particles.transform.position;
-        neighbourFireVFX.Play();
-        ShowSmoke(zoneId);
+        neighbourFireVFX.gameObject.SetActive(true);
+        // neighbourFireVFX.transform.position = 
+        //     _zones[zoneId].particles.transform.position;
+        // neighbourFireVFX.Play();
+        // ShowSmoke(zoneId);
     }
 
     public void StartSmokeRamp(string zoneId) =>
