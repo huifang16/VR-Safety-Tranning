@@ -34521,6 +34521,7 @@ Transform:
   m_Children:
   - {fileID: 2105527616}
   - {fileID: 194538540}
+  - {fileID: 1472440102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &208547817
@@ -34576,12 +34577,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerChokeManager
   head: {fileID: 180940518}
   moveProvider: {fileID: 194538543}
-  tunnelingVignetteController: {fileID: 945650218}
   crouchHeightThreshold: -0.05
   timeToStartDamage: 0.5
   timeToDeath: 6
   minMoveMultiplier: 0.1
   severityToFullBlur: 0.9
+  vignetteController: {fileID: 945650218}
+  chokeProvider: {fileID: 1472440103}
 --- !u!1 &208875257
 GameObject:
   m_ObjectHideFlags: 0
@@ -77102,6 +77104,7 @@ GameObject:
   - component: {fileID: 462875492}
   - component: {fileID: 462875494}
   - component: {fileID: 462875493}
+  - component: {fileID: 462875495}
   m_Layer: 0
   m_Name: BackTrackTrigger
   m_TagString: Untagged
@@ -77172,8 +77175,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7991661, y: 0.6048982, z: 0.4794172}
-  m_Center: {x: 0.09318015, y: -0.197551, z: -0.09436709}
+  m_Size: {x: 0.8824507, y: 1.6488427, z: 1.9659097}
+  m_Center: {x: 0.106435865, y: -0.83260095, z: -0.83761334}
+--- !u!114 &462875495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462875491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e4f2f99decf16c43a6d595720d250f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StairwellDeathZone
+  timeToDeath: 5
 --- !u!4 &463653188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2318761744862857056, guid: 42f30c85f9e074e4eb17ea01048327d2,
@@ -133022,8 +133038,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8749189, y: 2.8390245, z: 1}
-  m_Center: {x: -0.30362654, y: 0.9195123, z: 0}
+  m_Size: {x: 1.8749189, y: 2.8390245, z: 13.212921}
+  m_Center: {x: -0.30362654, y: 0.9195123, z: -6.1064606}
 --- !u!114 &780948277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250218,6 +250234,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 724041908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1472440101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472440102}
+  - component: {fileID: 1472440103}
+  m_Layer: 0
+  m_Name: TunnelingVignetteController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1472440102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472440101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 208547816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472440103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472440101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3164cc80d5dea42b647eecd2c0fcaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChokeVignetteProvider
+  parameters:
+    m_ApertureSize: 0.1
+    m_FeatheringEffect: 0.2
+    m_EaseInTime: 0.3
+    m_EaseOutTime: 0.3
+    m_EaseInTimeLock: 0
+    m_EaseOutDelayTime: 0
+    m_VignetteColor: {r: 0.3137255, g: 0, b: 0, a: 1}
+    m_VignetteColorBlend: {r: 0.3137255, g: 0, b: 0, a: 1}
+    m_ApertureVerticalPosition: 0
 --- !u!1001 &1472625445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360298,8 +360368,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8749189, y: 2.8390245, z: 1}
-  m_Center: {x: -0.30362654, y: 0.9195123, z: 0}
+  m_Size: {x: 1.8749189, y: 2.8390245, z: 10.794657}
+  m_Center: {x: -0.30362654, y: 0.9195123, z: 4.8973284}
 --- !u!4 &2113654167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7322839019957164238, guid: 3cdb710f55b8ba342bfc746fcebede5b,
