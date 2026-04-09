@@ -7,7 +7,7 @@ public class StoryManager : MonoBehaviour
     public static StoryManager Instance;
 
     public StoryState currentState;
-    public bool doorClosedBehind = false;
+    public bool isDoorClosed = true;
 
     public UnityEvent<StoryState> OnStateChanged;
     public UnityEvent<string>     OnUIPrompt;
@@ -67,9 +67,11 @@ public class StoryManager : MonoBehaviour
                 OnUIPrompt?.Invoke("The fire is far too big to fight.\nRun — now!");
                 break;
             case StoryState.CrawlHallway:
-                VFXManager.Instance.SetSmokeIntensity("HallwayLeft", 0.7f);
-                VFXManager.Instance.SetSmokeIntensity("HallwayRight", 0.9f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayLeft", isDoorClosed ? 0.7f:1.0f);
+                VFXManager.Instance.SetSmokeIntensity("HallwayRight", isDoorClosed ? 0.9f:1.3f);
                 OnUIPrompt?.Invoke("The smoke is thick and choking.\nStay low — crawl to the stairwell.");
+                
+                PlayerChokeManager.Instance?.BeginCrawlHallway(isDoorClosed);
                 break;
             case StoryState.Stairwell1:
                 OnUIPrompt?.Invoke("Smoke is small.\nMaybe we can go through?");

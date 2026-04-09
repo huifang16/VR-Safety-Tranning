@@ -9,8 +9,8 @@ public class WristUIController : MonoBehaviour
     public Transform wristAnchor; // the WristUIAnchor empty GameObject
 
     [Header("Settings")]
-    public float showAngleThreshold = 40f; // degrees above horizontal to show UI
-    public float fadeSpeed = 5f;
+    public float showAngleThreshold = 10f; // degrees above horizontal to show UI
+    public float fadeSpeed = 2f;
 
     private CanvasGroup canvasGroup;
 
