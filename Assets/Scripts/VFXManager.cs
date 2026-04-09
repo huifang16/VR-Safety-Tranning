@@ -59,10 +59,6 @@ public class VFXManager : MonoBehaviour {
 
     public void ShowFire(string zoneId) {
         neighbourFireVFX.gameObject.SetActive(true);
-        // neighbourFireVFX.transform.position = 
-        //     _zones[zoneId].particles.transform.position;
-        // neighbourFireVFX.Play();
-        // ShowSmoke(zoneId);
     }
 
     public void StartSmokeRamp(string zoneId) =>
@@ -71,8 +67,9 @@ public class VFXManager : MonoBehaviour {
     IEnumerator SmokeRamp(string zoneId) {
         float t = 0;
         while (t < 1f) {
-            t += Time.deltaTime * 0.15f; // slow build over ~7 seconds
+            t += Time.deltaTime * 0.05f; // slow build over ~20 seconds
             SetSmokeIntensity(zoneId, t);
+            Debug.Log("Start smoke ramp");
             yield return null;
         }
     }

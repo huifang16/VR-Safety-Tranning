@@ -48974,6 +48974,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293751244}
   m_Mesh: {fileID: 4300002, guid: 1e4c9d0deb3bcc144ae6e91318e143a7, type: 3}
+--- !u!4 &293996180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+    type: 3}
+  m_PrefabInstance: {fileID: 757404801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &293996182 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+    type: 3}
+  m_PrefabInstance: {fileID: 757404801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &294281155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78398,6 +78410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143437433680821799, guid: 2c863db4d32824d419b61ee44fc019eb,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6525024178207821146, guid: 2c863db4d32824d419b61ee44fc019eb,
         type: 3}
@@ -128924,6 +128941,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 757352317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &757404801
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1945600604}
+    m_Modifications:
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.219104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150343304738452381, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_Name
+      value: Stairwell1Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6335df7edeb947641b7753c56a7c191d, type: 3}
 --- !u!1001 &758298601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180338,6 +180433,12 @@ MonoBehaviour:
     ambientLight: {fileID: 0}
   - id: HallwayRight
     particles: {fileID: 6669660787214191005}
+    ambientLight: {fileID: 0}
+  - id: Stairwell1
+    particles: {fileID: 293996182}
+    ambientLight: {fileID: 0}
+  - id: Stairwell2
+    particles: {fileID: 1911486979}
     ambientLight: {fileID: 0}
   neighbourFireVFX: {fileID: 1162254708}
   outdoorChaosVFX: {fileID: 0}
@@ -241693,6 +241794,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1420854999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1421678728
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1945600604}
+    m_Modifications:
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.219104
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150343304738452381, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: m_Name
+      value: Stairwell2Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6335df7edeb947641b7753c56a7c191d, type: 3}
 --- !u!1001 &1422706389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -267522,7 +267701,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2018220573}
         m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
-        m_MethodName: GoToStairwell1
+        m_MethodName: GoToStairwell2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -279138,6 +279317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
       propertyPath: ShapeModule.angle
       value: 5
       objectReference: {fileID: 0}
@@ -279149,7 +279333,7 @@ PrefabInstance:
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 150
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
@@ -323963,6 +324147,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3106a6f3c2fc2a547b55f8f47ff2e09c, type: 3}
+--- !u!4 &1911486977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421678728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1911486979 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421678728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911667606
 GameObject:
   m_ObjectHideFlags: 0
@@ -330050,6 +330246,8 @@ Transform:
   - {fileID: 1960387953}
   - {fileID: 4007467443710175063}
   - {fileID: 762515248}
+  - {fileID: 293996180}
+  - {fileID: 1911486977}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1945863065
@@ -366579,6 +366777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143437433680821799, guid: 2c863db4d32824d419b61ee44fc019eb,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6525024178207821146, guid: 2c863db4d32824d419b61ee44fc019eb,
         type: 3}

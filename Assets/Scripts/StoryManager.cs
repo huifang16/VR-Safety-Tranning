@@ -75,15 +75,18 @@ public class StoryManager : MonoBehaviour
                 OnUIPrompt?.Invoke("Smoke is small.\nMaybe we can go through?");
                 break;
             case StoryState.Stairwell1Dead:
-                // VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.5f);
+                VFXManager.Instance.ShowSmoke("Stairwell1");
+                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 0.3f);
                 OnUIPrompt?.Invoke("Heavy smoke and heat below.\nSeek an alternative route?");
                 break;
             case StoryState.Backtrack:
-                OnUIPrompt?.Invoke("Find the other stairwell.");
+                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.0f);
+                OnUIPrompt?.Invoke("Smoke is too heavy. Find the other stairwell!!");
                 break;
             case StoryState.Stairwell2:
                 OnUIPrompt?.Invoke("This stairwell seems clear... keep moving.");
-                // VFXManager.Instance.StartSmokeRamp("Stairwell2");
+                VFXManager.Instance.ShowSmoke("Stairwell2");
+                VFXManager.Instance.StartSmokeRamp("Stairwell2");
                 break;
             case StoryState.SafeZone:
                 OnUIPrompt?.Invoke("You successfully escaped!");
