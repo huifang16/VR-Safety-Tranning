@@ -1,3 +1,4 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort;
 
@@ -18,5 +19,18 @@ public class ChokeVignetteProvider : MonoBehaviour, ITunnelingVignetteProvider
 
         parameters.easeInTime = 0.2f;
         parameters.easeOutTime = 0.3f;
+    }
+    
+    public void ResetToRedNormal()
+    {
+        parameters.apertureSize = 0.7f;
+        parameters.featheringEffect = 0.2f;
+        parameters.vignetteColor = new Color32(80, 0, 0, 255);
+        parameters.vignetteColorBlend = new Color32(80, 0, 0, 255);
+        parameters.easeInTime = 0.3f;
+        parameters.easeOutTime = 0.3f;
+        parameters.easeOutDelayTime = 0f;
+        parameters.easeInTimeLock = false;
+        parameters.apertureVerticalPosition = 0f;
     }
 }

@@ -9,10 +9,9 @@ public class PlayerChokeManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform head; // XR camera
     [SerializeField] private ContinuousMoveProvider moveProvider;
-    [SerializeField] private MonoBehaviour tunnelingVignetteController; // drag your vignette controller here
 
     [Header("Crouch Check")]
-    [SerializeField] private float crouchHeightThreshold = 1.20f; // tune for your rig
+    [SerializeField] private float crouchHeightThreshold = 1.2f; // tune for your rig
 
     [Header("Choke Tuning")]
     [SerializeField] private float timeToStartDamage = 2f;
@@ -27,6 +26,7 @@ public class PlayerChokeManager : MonoBehaviour
     private bool _doorPenalty;
     private float _exposure;
     private float _severity;
+    private bool _extremeSmoke = false;
 
     private void Awake()
     {
@@ -45,31 +45,34 @@ public class PlayerChokeManager : MonoBehaviour
         bool unsafeState = !isLowEnough || _doorPenalty;
 
         if (unsafeState)
-            _exposure += Time.deltaTime;
+        {
+            float multiplier = 1.0f;
+            if (_extremeSmoke) multiplier *= 2.0f;
+            if (_doorPenalty) multiplier *= 1.3f;
+            _exposure += Time.deltaTime * multiplier;
+        }
         else
-            _exposure = Mathf.Max(0f, _exposure - Time.deltaTime * 1.5f);
+        {
+            float recoveryRate = _extremeSmoke ? 1.5f : 2.5f;
+            _exposure = Mathf.Max(0f, _exposure - Time.deltaTime * recoveryRate);
+        }
 
-        _severity = Mathf.InverseLerp(timeToStartDamage, timeToDeath, _exposure);
-        _severity = Mathf.Clamp01(_severity);
+        _severity = Mathf.Clamp01(Mathf.InverseLerp(timeToStartDamage, timeToDeath, _exposure));
 
-        ApplyMovementPenalty(_severity, _doorPenalty);
-        ApplyVisionPenalty(_severity, _doorPenalty);
+        float finalSeverity = Mathf.Clamp01(_severity + (_doorPenalty ? 0.2f : 0f) + (_extremeSmoke ? 0.3f : 0f));
+
+        chokeProvider.SetSeverity(finalSeverity);
+
+        if (vignetteController != null)
+        {
+            if (finalSeverity > 0.05f)
+                vignetteController.BeginTunnelingVignette(chokeProvider);
+            else
+                vignetteController.EndTunnelingVignette(chokeProvider);
+        }
 
         if (_exposure >= timeToDeath)
-        {
             StoryManager.Instance?.GoToPlayerDead();
-        }
-        
-        chokeProvider.SetSeverity(_severity);
-
-        if (_severity > 0.01f)
-        {
-            vignetteController.BeginTunnelingVignette(chokeProvider);
-        }
-        else
-        {
-            vignetteController.EndTunnelingVignette(chokeProvider);
-        }
     }
 
     public void BeginCrawlHallway(bool doorWasClosed)
@@ -86,12 +89,17 @@ public class PlayerChokeManager : MonoBehaviour
         _doorPenalty = false;
         _exposure = 0f;
         _severity = 0f;
+        _extremeSmoke = false;
 
         if (moveProvider != null)
             moveProvider.moveSpeed = _baseMoveSpeed;
 
-        ApplyVisionPenalty(0f, false);
-    }
+        if (chokeProvider != null)
+            chokeProvider.SetSeverity(0f);
+
+        if (vignetteController != null && chokeProvider != null)
+            vignetteController.EndTunnelingVignette(chokeProvider);
+    } 
 
     public void SetDoorClosedBehind(bool closed)
     {
@@ -117,15 +125,18 @@ public class PlayerChokeManager : MonoBehaviour
         moveProvider.moveSpeed = _baseMoveSpeed * multiplier;
     }
 
-    private void ApplyVisionPenalty(float severity, bool doorPenalty)
+    public void BeginExtremeSmoke()
     {
-        float finalSeverity = Mathf.Clamp01(severity + (doorPenalty ? 0.25f : 0f));
+        _extremeSmoke = true;
+    }
 
-        // Replace these with the actual API of your tunneling vignette controller.
-        // Example idea:
-        // tunnelingVignetteController.SetIntensity(finalSeverity);
-        // tunnelingVignetteController.SetBlur(finalSeverity);
+    public void EndExtremeSmoke()
+    {
+        _extremeSmoke = false;    
+        if (chokeProvider != null)
+            chokeProvider.ResetToRedNormal();
 
-        Debug.Log($"Choke severity: {finalSeverity:0.00}");
+        if (vignetteController != null && chokeProvider != null)
+            vignetteController.EndTunnelingVignette(chokeProvider); 
     }
 }

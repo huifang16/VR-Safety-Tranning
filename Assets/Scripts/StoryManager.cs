@@ -78,11 +78,11 @@ public class StoryManager : MonoBehaviour
                 break;
             case StoryState.Stairwell1Dead:
                 VFXManager.Instance.ShowSmoke("Stairwell1");
-                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 0.3f);
+                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.0f);
                 OnUIPrompt?.Invoke("Heavy smoke and heat below.\nSeek an alternative route?");
                 break;
             case StoryState.Backtrack:
-                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.0f);
+                VFXManager.Instance.SetSmokeIntensity("Stairwell1", 1.5f);
                 OnUIPrompt?.Invoke("Smoke is too heavy. Find the other stairwell!!");
                 break;
             case StoryState.Stairwell2:
