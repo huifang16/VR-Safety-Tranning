@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\BathtubController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BathtubController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\wetcloth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wetcloth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\firebrigadephone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firebrigadephone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\TubHandle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\_course library\\scripts\\actions\\vibratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\_course library\\scripts\\actions\\vibratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\_course library\\scripts\\watercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\_course library\\scripts\\watercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,78 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WetCloth.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\WetCloth.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WetCloth.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\WetCloth.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WetCloth.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwB0AAAAfAAAAAAAAAA==",
+              "Title": "Water.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Water.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Water.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T15:30:37.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TubHandle.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TubHandle.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TubHandle.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TubHandle.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T00:51:56.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VibrateController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
-              "RelativeDocumentMoniker": "Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
-              "RelativeToolTip": "Assets\\_Course Library\\Scripts\\Actions\\VibrateController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T11:55:11.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FireBrigadePhone.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FireBrigadePhone.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FireBrigadePhone.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FireBrigadePhone.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FireBrigadePhone.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwBUAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T11:56:35.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WaterController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\WaterController.cs",
-              "RelativeDocumentMoniker": "Assets\\_Course Library\\Scripts\\WaterController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\_Course Library\\Scripts\\WaterController.cs",
-              "RelativeToolTip": "Assets\\_Course Library\\Scripts\\WaterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T15:42:47.051Z"
+              "WhenOpened": "2026-04-08T04:07:22.367Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BathtubController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\BathtubController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BathtubController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\BathtubController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BathtubController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Title": "UniversalAdditionalLightData.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T06:43:34.232Z",
+              "WhenOpened": "2026-04-09T04:02:25.51Z",
               "EditorCaption": ""
             }
           ]
