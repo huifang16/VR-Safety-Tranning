@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FaucetController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FaucetController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\DoorGapSealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\towelplaceable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towelplaceable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,40 +26,39 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TowelPlaceable.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TowelPlaceable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TowelPlaceable.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TowelPlaceable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TowelPlaceable.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA6wCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T15:18:38.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Water.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Water.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
               "RelativeToolTip": "Assets\\Scripts\\Water.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-08T04:07:22.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UniversalAdditionalLightData.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Runtime\\UniversalAdditionalLightData.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T04:02:25.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FaucetController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FaucetController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FaucetController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\FaucetController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FaucetController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Title": "DoorGapSealer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorGapSealer.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorGapSealer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T23:27:13.188Z",
+              "WhenOpened": "2026-04-14T21:47:56.099Z",
               "EditorCaption": ""
             }
           ]
