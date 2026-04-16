@@ -72,7 +72,9 @@ public class PlayerChokeManager : MonoBehaviour
         }
 
         if (_exposure >= timeToDeath)
-            StoryManager.Instance?.GoToPlayerDead();
+        {
+            PlayerDeathSequence.Instance.TriggerDeath("You were overcome by smoke.");            
+        }
     }
 
     public void BeginCrawlHallway(bool doorWasClosed)

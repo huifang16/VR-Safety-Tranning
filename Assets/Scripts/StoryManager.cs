@@ -96,6 +96,7 @@ public class StoryManager : MonoBehaviour
                 break;
             case StoryState.PlayerDead:
                 // UIManager handles death screen
+                
                 break;
         }
         Debug.Log("Story State Change: " + state);
