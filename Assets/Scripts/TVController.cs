@@ -4,7 +4,6 @@ public class TVController : MonoBehaviour
 {
     public GameObject warningCanvas;
     public AudioSource tvSound;
-    public StepManager stepManager;
 
     private bool isOn = false;
 
@@ -27,11 +26,6 @@ public class TVController : MonoBehaviour
                 tvSound.Play();
             else
                 tvSound.Stop();
-        }
-
-        if (isOn && stepManager != null)
-        {
-            stepManager.ShowTowelStep();
         }
     }
 

@@ -4,7 +4,7 @@ public class SinkWaterZone : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        TowelState towel = other.GetComponentInParent<TowelState>();
+        TowelController towel = other.GetComponentInParent<TowelController>();
 
         if (towel != null && !towel.isWet)
         {
