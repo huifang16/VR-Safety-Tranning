@@ -7,9 +7,10 @@ using System.Collections;
 public class FireBrigadePhone : MonoBehaviour
 {
     [Header("Audio Clips")]
-    public AudioClip dialingSound;        // The "Ringing" sound
-    public AudioClip fireBrigadeResponse; // The "911 Operator" voice
-    public AudioClip hangUpBeep;          // The "Beep Beep" finish sound
+    public AudioClip dialingSound;
+    public AudioClip fireBrigadeResponse;
+    public AudioClip playerResponse;
+    public AudioClip hangUpBeep;
 
     private AudioSource audioSource;
     private XRGrabInteractable grabInteractable;
@@ -21,9 +22,7 @@ public class FireBrigadePhone : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         grabInteractable = GetComponent<XRGrabInteractable>();
 
-        // Listen for Grab
         grabInteractable.selectEntered.AddListener(OnPhonePickedUp);
-        // Listen for Drop
         grabInteractable.selectExited.AddListener(OnPhoneDropped);
     }
 
@@ -37,7 +36,6 @@ public class FireBrigadePhone : MonoBehaviour
 
     void OnPhoneDropped(SelectExitEventArgs args)
     {
-        // If they drop the phone mid-call, stop everything
         if (callCoroutine != null && !hasCalled)
         {
             StopCoroutine(callCoroutine);
@@ -47,7 +45,7 @@ public class FireBrigadePhone : MonoBehaviour
 
     IEnumerator MakeCallSequence()
     {
-        // 1. Play Dialing/Ringing
+        // 1. Dialing / ringing
         if (dialingSound != null)
         {
             audioSource.clip = dialingSound;
@@ -55,7 +53,7 @@ public class FireBrigadePhone : MonoBehaviour
             yield return new WaitForSeconds(dialingSound.length);
         }
 
-        // 2. Play 911 Operator Response
+        // 2. Fire brigade / operator answer
         if (fireBrigadeResponse != null)
         {
             audioSource.clip = fireBrigadeResponse;
@@ -63,7 +61,15 @@ public class FireBrigadePhone : MonoBehaviour
             yield return new WaitForSeconds(fireBrigadeResponse.length);
         }
 
-        // 3. Play Finish "Beep Beep"
+        // 3. Player response
+        if (playerResponse != null)
+        {
+            audioSource.clip = playerResponse;
+            audioSource.Play();
+            yield return new WaitForSeconds(playerResponse.length);
+        }
+
+        // 4. Hang up beep
         if (hangUpBeep != null)
         {
             audioSource.clip = hangUpBeep;
@@ -71,19 +77,22 @@ public class FireBrigadePhone : MonoBehaviour
             yield return new WaitForSeconds(hangUpBeep.length);
         }
 
-        hasCalled = true; // Mark call as finished
+        hasCalled = true;
         OnFireBrigadeCalled();
     }
 
     void OnFireBrigadeCalled()
     {
         Debug.Log("Fire Brigade Called and Call Disconnected.");
-        // Trigger your next game objective here
+        // Trigger next objective here
     }
 
     private void OnDestroy()
     {
-        grabInteractable.selectEntered.RemoveListener(OnPhonePickedUp);
-        grabInteractable.selectExited.RemoveListener(OnPhoneDropped);
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectEntered.RemoveListener(OnPhonePickedUp);
+            grabInteractable.selectExited.RemoveListener(OnPhoneDropped);
+        }
     }
 }

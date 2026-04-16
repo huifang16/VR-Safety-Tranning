@@ -58819,7 +58819,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 39eeabf0f489f4e46a024aa733bf1b4b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5a2f767a6abae124f95cc739ef53d1f5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -63302,8 +63302,8 @@ MonoBehaviour:
   open: 0
   interactDistance: 5
   doorAudioSource: {fileID: 368001671}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  openSound: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
+  closeSound: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
 --- !u!82 &368001671
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63316,7 +63316,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -79270,9 +79270,9 @@ MonoBehaviour:
   openandclose: {fileID: 469814683}
   open: 0
   interactDistance: 15
-  doorAudioSource: {fileID: 0}
-  openSound: {fileID: 0}
-  closeSound: {fileID: 0}
+  doorAudioSource: {fileID: 469814688}
+  openSound: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
+  closeSound: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
 --- !u!95 &469814683
 Animator:
   serializedVersion: 7
@@ -177415,6 +177415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   dialingSound: {fileID: 8300000, guid: 5ffbc631dbe652e459195c1edfe97b69, type: 3}
   fireBrigadeResponse: {fileID: 8300000, guid: 10dae88bca0660046a8bd6d3696957f2, type: 3}
+  playerResponse: {fileID: 8300000, guid: f9aca75878feba541a4fbd351dffe8ff, type: 3}
   hangUpBeep: {fileID: 8300000, guid: 08c9a3cf6b83d2b40bed1d0f6288ed03, type: 3}
 --- !u!114 &1054451044
 MonoBehaviour:
@@ -178777,6 +178778,21 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4929668019831370810, guid: f3e82dc7c471ff447b3ca0e0bfded076,
+        type: 3}
+      propertyPath: openSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
+    - target: {fileID: 4929668019831370810, guid: f3e82dc7c471ff447b3ca0e0bfded076,
+        type: 3}
+      propertyPath: closeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
+    - target: {fileID: 4929668019831370810, guid: f3e82dc7c471ff447b3ca0e0bfded076,
+        type: 3}
+      propertyPath: doorAudioSource
+      value: 
+      objectReference: {fileID: 1096069510}
     - target: {fileID: 8136687124933929416, guid: f3e82dc7c471ff447b3ca0e0bfded076,
         type: 3}
       propertyPath: m_RootOrder
@@ -186496,6 +186512,12 @@ AudioSource:
 --- !u!4 &1096069509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8281444737325066938, guid: f3e82dc7c471ff447b3ca0e0bfded076,
+    type: 3}
+  m_PrefabInstance: {fileID: 1059030930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1096069510 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7004742633483278725, guid: f3e82dc7c471ff447b3ca0e0bfded076,
     type: 3}
   m_PrefabInstance: {fileID: 1059030930}
   m_PrefabAsset: {fileID: 0}
