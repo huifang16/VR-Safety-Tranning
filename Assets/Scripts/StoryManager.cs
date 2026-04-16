@@ -36,7 +36,7 @@ public class StoryManager : MonoBehaviour
         switch (state)
         {
             case StoryState.LivingRoom:
-                OnUIPrompt?.Invoke("Somethign smells like it's burning...\nCheck the kitchen.");
+                OnUIPrompt?.Invoke("Something smells like it's burning...\nCheck the kitchen.");
                 break;
             // case StoryState.CheckKitchen:
             //     OnUIPrompt?.Invoke("Nothing is cooking here.\nThe smell isn't coming from the kitchen.");
