@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
+using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class PlayerDeathSequence : MonoBehaviour
 {
@@ -24,6 +27,15 @@ public class PlayerDeathSequence : MonoBehaviour
     [Header("Vignette")]
     public TunnelingVignetteController vignetteController;
     public ChokeVignetteProvider chokeProvider;
+    
+    [Header("Death Screen")]
+    public GameObject deathScreenCanvas;
+    public TextMeshProUGUI deathReasonText;
+    
+    [Header("Restart Input")]
+    public ActionBasedController leftController;
+    public ActionBasedController rightController;
+    
 
     bool _isDead = false;
 
@@ -63,7 +75,7 @@ public class PlayerDeathSequence : MonoBehaviour
         // --- 3. Fade to black — set params BEFORE BeginTunnelingVignette ---
         // Zero easeInTime so the controller's own easing snaps to apertureSize=0 immediately
         chokeProvider.parameters.apertureSize     = 0f;
-        chokeProvider.parameters.featheringEffect = 0.1f;
+        chokeProvider.parameters.featheringEffect = 0.2f;
         chokeProvider.parameters.vignetteColor    = Color.black;
         chokeProvider.parameters.vignetteColorBlend = Color.black;
         chokeProvider.parameters.easeInTime       = 0f;   // snap, no easing
@@ -74,10 +86,23 @@ public class PlayerDeathSequence : MonoBehaviour
         // Wait for the controller's Update to process it (1 frame) then hold
         yield return null;
         yield return new WaitForSeconds(holdBlack);
+        
+        // Show death screen
+        if (deathScreenCanvas != null)
+        {
+            deathScreenCanvas.SetActive(true);
+            if (deathReasonText != null)
+                deathReasonText.text = reason + "\n\nPress trigger to restart.";
+        }
 
         // --- 4. Fire story events ---
         StoryManager.Instance.GoToPlayerDead();
         StoryManager.Instance.OnPlayerDied?.Invoke(reason);
+        
+        // Wait for trigger press
+        yield return WaitForTriggerPress();
+
+        RestartScene();
     }
 
     // Call this from your UI restart button
@@ -85,4 +110,29 @@ public class PlayerDeathSequence : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    
+    IEnumerator WaitForTriggerPress()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        while (true)
+        {
+            float leftValue = leftController != null
+                ? leftController.activateAction.action.ReadValue<float>()
+                : 0f;
+
+            float rightValue = rightController != null
+                ? rightController.activateAction.action.ReadValue<float>()
+                : 0f;
+
+            Debug.Log($"Left: {leftValue} | Right: {rightValue}");
+
+            if (leftValue > 0.1f || rightValue > 0.1f)
+                yield break;
+
+            yield return null;
+        }
+    }
+    
+    
 }
