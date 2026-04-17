@@ -11,9 +11,6 @@ public class RemoteControlVR : MonoBehaviour
 
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
-
-    // Store original color
-    private Color originalEmission;
     private Material mat;
 
     void Awake()
@@ -26,11 +23,7 @@ public class RemoteControlVR : MonoBehaviour
         if (indicatorRenderer != null)
         {
             mat = indicatorRenderer.material;
-
-            // Save original emission (dark)
-            originalEmission = mat.GetColor("_EmissionColor");
-
-            // Ensure it starts dark
+            mat.EnableKeyword("_EMISSION");
             mat.SetColor("_EmissionColor", Color.black);
         }
     }
@@ -58,19 +51,17 @@ public class RemoteControlVR : MonoBehaviour
     {
         isHeld = false;
     }
+
     void OnActivated(ActivateEventArgs args)
     {
         if (!isHeld) return;
 
-        // Play click sound
         if (clickSound != null)
             clickSound.Play();
 
-        // Toggle TV
         if (tv != null)
             tv.ToggleTV();
 
-        // Flash light
         StartCoroutine(FlashLight());
     }
 
@@ -78,7 +69,6 @@ public class RemoteControlVR : MonoBehaviour
     {
         if (mat != null)
         {
-            // Bright glow (you can change color)
             mat.EnableKeyword("_EMISSION");
             mat.SetColor("_EmissionColor", Color.red * 5f);
         }
@@ -87,7 +77,6 @@ public class RemoteControlVR : MonoBehaviour
 
         if (mat != null)
         {
-            // Back to dark
             mat.SetColor("_EmissionColor", Color.black);
         }
     }
