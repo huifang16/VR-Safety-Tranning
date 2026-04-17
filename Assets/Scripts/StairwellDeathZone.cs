@@ -16,8 +16,8 @@ public class StairwellDeathZone : MonoBehaviour
 
         if (_timer >= timeToDeath)
         {
-            Debug.Log("Player died in Stairwell1 (too much smoke)");
             StoryManager.Instance?.GoToPlayerDead();
+            PlayerDeathSequence.Instance?.TriggerDeath("You where overcome by smoke");
         }
     }
 

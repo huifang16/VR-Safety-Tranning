@@ -91,13 +91,19 @@ public class PlayerDeathSequence : MonoBehaviour
         if (deathScreenCanvas != null)
         {
             deathScreenCanvas.SetActive(true);
+
             if (deathReasonText != null)
                 deathReasonText.text = reason + "\n\nPress trigger to restart.";
         }
+        
 
         // --- 4. Fire story events ---
         StoryManager.Instance.GoToPlayerDead();
         StoryManager.Instance.OnPlayerDied?.Invoke(reason);
+        
+        
+        chokeProvider.parameters.apertureSize     = 1.0f;
+        vignetteController.BeginTunnelingVignette(chokeProvider);
         
         // Wait for trigger press
         yield return WaitForTriggerPress();
