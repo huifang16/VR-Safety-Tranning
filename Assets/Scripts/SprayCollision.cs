@@ -3,17 +3,22 @@ using UnityEngine;
 public class SprayCollision : MonoBehaviour
 {
     public FireExtinguisher extinguisher;
-    public float extinguishPower = 1f;
+    public float extinguishPower = 0.5f;
 
-    void OnTriggerStay(Collider other)
+    void OnParticleCollision(GameObject other)
     {
         if (!extinguisher.isSpraying) return;
 
-        Fire fire = other.GetComponent<Fire>();
+        Fire fire = other.GetComponentInParent<Fire>();
 
         if (fire != null)
         {
-            fire.ApplyExtinguish(extinguisher.extinguisherType, Time.deltaTime * extinguishPower);
+            fire.ApplyExtinguish(
+                extinguisher.extinguisherType,
+                extinguishPower * Time.deltaTime
+            );
         }
+
+        Debug.Log("Particle hit: " + other.name);
     }
 }

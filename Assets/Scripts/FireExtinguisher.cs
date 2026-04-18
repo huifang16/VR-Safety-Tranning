@@ -1,33 +1,66 @@
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections.Generic;
 
 public class FireExtinguisher : MonoBehaviour
 {
     public string extinguisherType;
     public ParticleSystem sprayParticles;
 
+    public XRNode controllerNode = XRNode.RightHand;
+    private InputDevice device;
+
+    private bool isHeld = false;
     public bool isSpraying = false;
+
+    void Start()
+    {
+        device = InputDevices.GetDeviceAtXRNode(controllerNode);
+        sprayParticles.Stop();
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!isHeld) return;
+
+        if (!device.isValid)
+            device = InputDevices.GetDeviceAtXRNode(controllerNode);
+
+        bool triggerPressed;
+        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out triggerPressed))
         {
-            StartSpray();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            StopSpray();
+            if (triggerPressed)
+                StartSpray();
+            else
+                StopSpray();
         }
     }
 
     public void StartSpray()
     {
+        if (isSpraying) return;
+
         isSpraying = true;
         sprayParticles.Play();
     }
 
     public void StopSpray()
     {
+        if (!isSpraying) return;
+
         isSpraying = false;
         sprayParticles.Stop();
+    }
+
+    public void OnGrab()
+    {
+        isHeld = true;
+    }
+
+    public void OnRelease()
+    {
+        isHeld = false;
+        StopSpray();
     }
 }
