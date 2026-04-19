@@ -25719,6 +25719,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d9f374cc51a6b4fb75751346d70b83, type: 3}
+--- !u!1 &151328488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151328489}
+  - component: {fileID: 151328490}
+  m_Layer: 0
+  m_Name: Haptic Impulse Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &151328489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151328488}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007297769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151328490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151328488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics.HapticImpulsePlayer
+  m_HapticOutput:
+    m_InputSourceMode: 2
+    m_InputAction:
+      m_Name: Haptic
+      m_Type: 2
+      m_ExpectedControlType: 
+      m_Id: ed707c70-ece3-451d-9b8f-3f97fafe32fc
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_InputActionReference: {fileID: 0}
+    m_ObjectReferenceObject: {fileID: 0}
+  m_AmplitudeMultiplier: 1
 --- !u!4 &151913765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8128322320853617336, guid: e9a47cdb5968d66499f6b4ee53467cd4,
@@ -27529,7 +27587,7 @@ RectTransform:
   m_GameObject: {fileID: 164874334}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1663495974}
@@ -100166,7 +100224,7 @@ Transform:
   m_GameObject: {fileID: 606952026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.219, y: 14.351, z: -5.145}
+  m_LocalPosition: {x: 29.219, y: 13.887, z: -5.411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176631,7 +176689,7 @@ MonoBehaviour:
   playerResponse: {fileID: 8300000, guid: a162bd9878199ce4cbcd71625dfe6b39, type: 3}
   hangUpBeep: {fileID: 8300000, guid: 940ca0fa1bf35a94ba45d0d77253d477, type: 3}
   grabSound: {fileID: 8300000, guid: 593c1da2e8800bf4494e0dd60ff5b7e2, type: 3}
-  completeUIManager: {fileID: 0}
+  completeUIManager: {fileID: 1781014480}
 --- !u!114 &1054451044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176903,12 +176961,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0b9921bce4eeb49bd05815b1135ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Feedback.SimpleHapticFeedback
-  m_InteractorSourceObject: {fileID: 0}
-  m_HapticImpulsePlayer: {fileID: 0}
+  m_InteractorSourceObject: {fileID: 2007297772}
+  m_HapticImpulsePlayer: {fileID: 151328490}
   m_PlaySelectEntered: 1
   m_SelectEnteredData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
+    m_Amplitude: 1
+    m_Duration: 0.2
     m_Frequency: 0
   m_PlaySelectExited: 0
   m_SelectExitedData:
@@ -300579,7 +300637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CompleteUIManager
   completePanel: {fileID: 606952026}
-  nextSceneName: NextScene
+  nextSceneName: MainMenu
   audioSource: {fileID: 1781014479}
   completeSound: {fileID: 8300000, guid: f24d0e61fe27de141a74d259a6afa735, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 9dec4bde313ff57489fcc575936dfef3, type: 3}
@@ -300594,6 +300652,7 @@ GameObject:
   - component: {fileID: 1782474376}
   - component: {fileID: 1782474377}
   - component: {fileID: 1782474378}
+  - component: {fileID: 1782474379}
   m_Layer: 0
   m_Name: SinkWaterZone
   m_TagString: Untagged
@@ -300649,6 +300708,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf48ca3844d77404b84c0a4f0dcca7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkWaterZone
+  waterAudio: {fileID: 1782474379}
+  waterLoop: {fileID: 8300000, guid: e1682c348bfd6514dbe1a5b9c4ec5eaa, type: 3}
+  splashSound: {fileID: 8300000, guid: 52f3a5ebd9ddeab4f908e2c4128523ad, type: 3}
+--- !u!82 &1782474379
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782474375}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1783043510
 GameObject:
   m_ObjectHideFlags: 0
@@ -337334,6 +337493,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 280255292}
+  - {fileID: 151328489}
   m_Father: {fileID: 2105527616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2007297770

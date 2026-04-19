@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
@@ -38,11 +39,11 @@ public class FireBrigadePhone : MonoBehaviour
 
         if (!callFinished && callCoroutine == null)
         {
-            callCoroutine = StartCoroutine(MakeCallSequence());
+            callCoroutine = StartCoroutine(MakeCallSequence(args.interactorObject));
         }
     }
 
-    IEnumerator MakeCallSequence()
+    IEnumerator MakeCallSequence(IXRSelectInteractor interactor)
     {
         if (dialingSound != null)
         {
