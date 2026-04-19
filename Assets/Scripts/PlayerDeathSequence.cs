@@ -30,6 +30,7 @@ public class PlayerDeathSequence : MonoBehaviour
     
     [Header("Death Screen")]
     public GameObject deathScreenCanvas;
+    public GameObject UICamera;
     public TextMeshProUGUI deathReasonText;
     
     [Header("Restart Input")]
@@ -90,6 +91,7 @@ public class PlayerDeathSequence : MonoBehaviour
         // Show death screen
         if (deathScreenCanvas != null)
         {
+            UICamera.SetActive(true);
             deathScreenCanvas.SetActive(true);
 
             if (deathReasonText != null)
