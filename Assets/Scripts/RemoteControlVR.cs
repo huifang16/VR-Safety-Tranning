@@ -8,6 +8,7 @@ public class RemoteControlVR : MonoBehaviour
     public TVController tv;
     public AudioSource clickSound;
     public Renderer indicatorRenderer;
+    public AudioClip grabSound;
 
     private XRGrabInteractable grabInteractable;
     private bool isHeld = false;
@@ -52,6 +53,9 @@ public class RemoteControlVR : MonoBehaviour
     void OnGrab(SelectEnterEventArgs args)
     {
         isHeld = true;
+
+        if (clickSound != null && grabSound != null)
+            clickSound.PlayOneShot(grabSound);
     }
 
     void OnRelease(SelectExitEventArgs args)

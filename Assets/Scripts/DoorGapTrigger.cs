@@ -17,11 +17,19 @@ public class DoorGapTrigger : MonoBehaviour
 
         if (!towel.isWet)
         {
-            Debug.Log("Towel is dry.");
+            Debug.Log("Towel is dry. Wet it first.");
             return;
         }
 
+        if (StepManager.Instance != null)
+            StepManager.Instance.SetStep(StepState.CallHelp);
+
+        if (VFXManager.Instance != null)
+            VFXManager.Instance.SetSmokeIntensity("FrontDoorSmoke", 0.2f);
+
         towel.SealDoor();
         triggered = true;
+
+        Debug.Log("Door gap sealed. Next step: Call for help.");
     }
 }

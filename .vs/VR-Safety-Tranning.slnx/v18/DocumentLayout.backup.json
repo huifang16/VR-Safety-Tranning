@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\DoorGapSealer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\vrtriggerzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vrtriggerzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\towelplaceable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\towelplaceable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\stepui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stepui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Water.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\storystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\storystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\stepstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stepstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\stepmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stepmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\StoryManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tvcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\vr-safety-tranning\\assets\\scripts\\wristuicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wristuicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TowelPlaceable.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TowelPlaceable.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TowelPlaceable.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TowelPlaceable.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TowelPlaceable.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA6wCcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "StepManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StepManager.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StepManager.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T15:18:38.913Z",
+              "WhenOpened": "2026-04-18T05:41:06.858Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VRTriggerZone.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\VRTriggerZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\VRTriggerZone.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\VRTriggerZone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\VRTriggerZone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T06:05:38.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StepState.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StepState.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StepState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T05:37:35.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Water.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Water.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\Water.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Water.cs",
+              "Title": "StoryState.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StoryState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StoryState.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StoryState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StoryState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T04:07:22.367Z"
+              "WhenOpened": "2026-04-17T14:21:32.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DoorGapSealer.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorGapSealer.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\DoorGapSealer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DoorGapSealer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StepUI.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StepUI.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StepUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StepUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T21:47:56.099Z",
+              "WhenOpened": "2026-04-17T14:18:48.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WristUIController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\WristUIController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WristUIController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\WristUIController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WristUIController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:56:49.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TVController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TVController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TVController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\TVController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TVController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T01:48:33.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StoryManager.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\VR-Safety-Tranning\\Assets\\Scripts\\StoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StoryManager.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAQwHcAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:17:08.502Z",
               "EditorCaption": ""
             }
           ]

@@ -27,6 +27,17 @@ public class TVController : MonoBehaviour
             else
                 tvSound.Stop();
         }
+
+        if (isOn)
+        {
+            if (StepManager.Instance != null)
+                StepManager.Instance.SetStep(StepState.SmokeAtDoor);
+
+            if (VFXManager.Instance != null)
+                VFXManager.Instance.SetSmokeIntensity("FrontDoorSmoke",40f);
+
+            Debug.Log("TV turned on. Smoke started at front door.");
+        }
     }
 
     public bool IsOn()

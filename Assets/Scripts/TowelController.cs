@@ -4,14 +4,13 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class TowelController : MonoBehaviour
 {
-    [Header("Wet State")]
+
     public bool isWet = false;
     public Renderer towelRenderer;
-
-    [Header("Door Seal")]
-    public GameObject doorTowelVisual;   // hidden towel at door gap
+    public AudioSource audioSource;
+    public AudioClip grabSound;
+    public GameObject doorTowelVisual;
     private bool isSealed = false;
-
     private XRGrabInteractable grabInteractable;
     private Rigidbody rb;
 
@@ -25,6 +24,28 @@ public class TowelController : MonoBehaviour
     {
         if (doorTowelVisual != null)
             doorTowelVisual.SetActive(false);
+    }
+    void OnEnable()
+    {
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectEntered.AddListener(OnGrab);
+        }
+    }
+
+    void OnDisable()
+    {
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectEntered.RemoveListener(OnGrab);
+        }
+    }
+    void OnGrab(SelectEnterEventArgs args)
+    {
+        if (audioSource != null && grabSound != null)
+        {
+            audioSource.PlayOneShot(grabSound);
+        }
     }
 
     public void SetWet()
@@ -47,12 +68,16 @@ public class TowelController : MonoBehaviour
                 mat.SetFloat("_Smoothness", 0.1f);
         }
 
+        if (StepManager.Instance != null)
+            StepManager.Instance.SetStep(StepState.SealDoorGap);
+
         Debug.Log("Towel is now wet.");
     }
 
     public void SealDoor()
     {
         if (isSealed) return;
+
         if (!isWet)
         {
             Debug.Log("Towel is not wet, cannot seal door.");
@@ -61,7 +86,6 @@ public class TowelController : MonoBehaviour
 
         isSealed = true;
 
-        // release from hand first
         if (grabInteractable != null && grabInteractable.isSelected)
         {
             var interactor = grabInteractable.firstInteractorSelecting;
@@ -71,18 +95,15 @@ public class TowelController : MonoBehaviour
             }
         }
 
-        // stop physics
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
 
-        // show towel at door gap
         if (doorTowelVisual != null)
             doorTowelVisual.SetActive(true);
 
-        // hide grabbed towel
         gameObject.SetActive(false);
 
         Debug.Log("Door gap sealed with wet towel.");
