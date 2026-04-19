@@ -15,7 +15,7 @@ public class SprayCollision : MonoBehaviour
         {
             fire.ApplyExtinguish(
                 extinguisher.extinguisherType,
-                extinguishPower * Time.deltaTime
+                extinguishPower
             );
         }
 
