@@ -27514,7 +27514,7 @@ GameObject:
   - component: {fileID: 164874337}
   - component: {fileID: 164874336}
   m_Layer: 0
-  m_Name: CompletePanel
+  m_Name: CompleteUIPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27529,8 +27529,8 @@ RectTransform:
   m_GameObject: {fileID: 164874334}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1663495974}
   m_Father: {fileID: 606952027}
@@ -35070,6 +35070,7 @@ MonoBehaviour:
   vignetteController: {fileID: 945650218}
   chokeProvider: {fileID: 1472440103}
   deathScreenCanvas: {fileID: 0}
+  UICamera: {fileID: 0}
   deathReasonText: {fileID: 0}
   leftController: {fileID: 2007297773}
   rightController: {fileID: 932670035}
@@ -35775,7 +35776,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1781014477}
+      - m_Target: {fileID: 1781014480}
         m_TargetAssemblyTypeName: CompleteUIManager, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 1
@@ -100150,7 +100151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 606952027}
   m_Layer: 0
-  m_Name: CompletePanel
+  m_Name: CompleteUIPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100165,7 +100166,7 @@ Transform:
   m_GameObject: {fileID: 606952026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.85, y: 13.61297, z: -5.41562}
+  m_LocalPosition: {x: 29.219, y: 14.351, z: -5.145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176630,7 +176631,7 @@ MonoBehaviour:
   playerResponse: {fileID: 8300000, guid: a162bd9878199ce4cbcd71625dfe6b39, type: 3}
   hangUpBeep: {fileID: 8300000, guid: 940ca0fa1bf35a94ba45d0d77253d477, type: 3}
   grabSound: {fileID: 8300000, guid: 593c1da2e8800bf4494e0dd60ff5b7e2, type: 3}
-  completeUIManager: {fileID: 1781014477}
+  completeUIManager: {fileID: 0}
 --- !u!114 &1054451044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187649,7 +187650,7 @@ GameObject:
   - component: {fileID: 1109697019}
   - component: {fileID: 1109697018}
   m_Layer: 0
-  m_Name: CompleteText
+  m_Name: CompleteUIText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221597,7 +221598,7 @@ PrefabInstance:
     - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.54
+      value: 18.84
       objectReference: {fileID: 0}
     - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
@@ -221607,7 +221608,7 @@ PrefabInstance:
     - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.79
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 4007467443696154683, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
@@ -221702,12 +221703,12 @@ PrefabInstance:
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
@@ -221717,17 +221718,37 @@ PrefabInstance:
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.42138356
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.42138356
+      value: 0.26415092
       objectReference: {fileID: 0}
     - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.42138356
+      value: 0.26415092
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 65278
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669660787234772721, guid: 6335df7edeb947641b7753c56a7c191d,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.3333333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -278410,7 +278431,7 @@ GameObject:
   - component: {fileID: 1663495976}
   - component: {fileID: 1663495975}
   m_Layer: 0
-  m_Name: Complete Background
+  m_Name: CompleteUIBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300424,7 +300445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1781014478}
-  - component: {fileID: 1781014477}
+  - component: {fileID: 1781014480}
   - component: {fileID: 1781014479}
   m_Layer: 0
   m_Name: CompleteUIManager
@@ -300433,23 +300454,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1781014477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781014476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 735f74cefe264994eb87f342d8faa7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CompleteUIManager
-  completePanel: {fileID: 164874334}
-  nextSceneName: NextScene
-  audioSource: {fileID: 1781014479}
-  completeSound: {fileID: 8300000, guid: f24d0e61fe27de141a74d259a6afa735, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: 9dec4bde313ff57489fcc575936dfef3, type: 3}
 --- !u!4 &1781014478
 Transform:
   m_ObjectHideFlags: 0
@@ -300562,6 +300566,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1781014480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781014476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735f74cefe264994eb87f342d8faa7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompleteUIManager
+  completePanel: {fileID: 606952026}
+  nextSceneName: NextScene
+  audioSource: {fileID: 1781014479}
+  completeSound: {fileID: 8300000, guid: f24d0e61fe27de141a74d259a6afa735, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 9dec4bde313ff57489fcc575936dfef3, type: 3}
 --- !u!1 &1782474375
 GameObject:
   m_ObjectHideFlags: 0
@@ -368217,7 +368238,7 @@ SceneRoots:
   - {fileID: 208547816}
   - {fileID: 1945600604}
   - {fileID: 824675595}
-  - {fileID: 606952027}
-  - {fileID: 1781014478}
   - {fileID: 70792401}
   - {fileID: 1225008108}
+  - {fileID: 1781014478}
+  - {fileID: 606952027}
