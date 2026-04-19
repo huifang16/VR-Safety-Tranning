@@ -11,12 +11,6 @@ public class CompleteUI : MonoBehaviour
     public AudioClip completeSound;
     public AudioClip buttonClickSound;
 
-    void Start()
-    {
-        if (completePanel != null)
-            completePanel.SetActive(false);
-    }
-
     public void ShowCompleteUI()
     {
         if (completePanel != null)
