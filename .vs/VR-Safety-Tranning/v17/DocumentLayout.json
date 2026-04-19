@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\Fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\SprayCollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SprayCollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\Fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\FireExtinguisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,15 +42,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SprayCollision.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\SprayCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SprayCollision.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\SprayCollision.cs",
               "RelativeToolTip": "Assets\\Scripts\\SprayCollision.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T10:09:07.579Z"
+              "WhenOpened": "2026-04-19T10:09:07.579Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,19 +61,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\FireExtinguisher.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\FireExtinguisher.cs",
               "RelativeToolTip": "Assets\\Scripts\\FireExtinguisher.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAwwBgAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T09:56:09.764Z"
+              "WhenOpened": "2026-04-19T09:56:09.764Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\Fire.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Fire.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\test2\\VR-Safety-Tranning\\Assets\\Scripts\\Fire.cs",
               "RelativeToolTip": "Assets\\Scripts\\Fire.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-19T09:09:43.842Z",
               "EditorCaption": ""

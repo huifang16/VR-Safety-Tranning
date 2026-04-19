@@ -19280,7 +19280,7 @@ MonoBehaviour:
   allowedExtinguisherTypes:
   - ' Carbon dioxide'
   - Powder
-  health: 5
+  health: 30
   audioSource: {fileID: 166682886}
   correctSound: {fileID: 8300000, guid: 1848f7acba423374e9bb565db33142b8, type: 3}
 --- !u!65 &982958152
@@ -25121,7 +25121,7 @@ MonoBehaviour:
   - Carbon dioxide
   - Powder
   - Foam
-  health: 5
+  health: 30
   audioSource: {fileID: 1371121148}
   correctSound: {fileID: 8300000, guid: 1848f7acba423374e9bb565db33142b8, type: 3}
 --- !u!65 &1251093212
@@ -33359,6 +33359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151679617200878745, guid: 616441c866350a846a066b205bdb3cf0,
+        type: 3}
+      propertyPath: health
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6151679617200878745, guid: 616441c866350a846a066b205bdb3cf0,
         type: 3}

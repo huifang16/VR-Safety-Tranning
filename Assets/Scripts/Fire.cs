@@ -4,15 +4,15 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     public List<string> allowedExtinguisherTypes;
-    public float health = 5f;
+
+    public float health = 10f;
 
     public AudioSource audioSource;
     public AudioClip correctSound;
 
-    private ParticleSystem[] fireParticles; // ALL particle systems
+    private ParticleSystem[] fireParticles;
 
     private bool hasPlayedCorrectSound = false;
-
     private bool hasReported = false;
 
     void Awake()
@@ -22,24 +22,23 @@ public class Fire : MonoBehaviour
 
     public void ApplyExtinguish(string extinguisherType, float amount)
     {
-        if (allowedExtinguisherTypes.Contains(extinguisherType))
+        if (!allowedExtinguisherTypes.Contains(extinguisherType))
         {
-            if (!hasPlayedCorrectSound && audioSource != null && correctSound != null)
-            {
-                audioSource.PlayOneShot(correctSound);
-                hasPlayedCorrectSound = true;
-            }
-
-            health -= amount;
-
-            if (health <= 0)
-            {
-                Extinguish();
-            }
+            Debug.Log("Wrong extinguisher (ignored): " + extinguisherType);
+            return;
         }
-        else
+
+        if (!hasPlayedCorrectSound && audioSource != null && correctSound != null)
         {
-            Debug.Log("Wrong extinguisher: " + extinguisherType);
+            audioSource.PlayOneShot(correctSound);
+            hasPlayedCorrectSound = true;
+        }
+
+        health -= amount;
+
+        if (health <= 0)
+        {
+            Extinguish();
         }
     }
 
