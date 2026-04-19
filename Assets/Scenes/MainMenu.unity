@@ -7119,6 +7119,7 @@ MonoBehaviour:
   vignetteController: {fileID: 0}
   chokeProvider: {fileID: 0}
   deathScreenCanvas: {fileID: 0}
+  UICamera: {fileID: 0}
   deathReasonText: {fileID: 0}
   leftController: {fileID: 471794498}
   rightController: {fileID: 1374908438}

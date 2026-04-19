@@ -304963,6 +304963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf48ca3844d77404b84c0a4f0dcca7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SinkWaterZone
+  waterAudio: {fileID: 0}
+  waterLoop: {fileID: 0}
+  splashSound: {fileID: 0}
 --- !u!1 &1783043510
 GameObject:
   m_ObjectHideFlags: 0
