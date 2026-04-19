@@ -8,7 +8,6 @@ public class Fire : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip correctSound;
-    public AudioClip wrongSound;
 
     private ParticleSystem[] fireParticles; // ALL particle systems
 
@@ -40,10 +39,6 @@ public class Fire : MonoBehaviour
         }
         else
         {
-            if (audioSource != null && wrongSound != null && !audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(wrongSound);
-            }
             Debug.Log("Wrong extinguisher: " + extinguisherType);
         }
     }
