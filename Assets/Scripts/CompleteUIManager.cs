@@ -41,6 +41,6 @@ public class CompleteUIManager : MonoBehaviour
 
     void LoadScene()
     {
-        SceneManager.LoadScene("Fire Extinguish");
+        SceneManager.LoadScene("MainMenu");
     }
 }

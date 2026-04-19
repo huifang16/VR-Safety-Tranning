@@ -1,35 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 public class MenuManager : MonoBehaviour
 {
+    [Header("Menus")]
     public GameObject startMenu;
+    public GameObject levelMenu;
     public GameObject settingMenu;
 
+    [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip menuSound;
     public AudioClip buttonClickSound;
 
     void Start()
     {
-        if (startMenu != null)
-            startMenu.SetActive(true);
-
-        if (settingMenu != null)
-            settingMenu.SetActive(false);
+        ShowStartMenu();
 
         if (audioSource != null && menuSound != null)
         {
             audioSource.clip = menuSound;
+            audioSource.loop = true;
             audioSource.Play();
         }
     }
 
-    void PlayButtonClick()
+    void PlayClickSound()
     {
         if (audioSource != null && buttonClickSound != null)
         {
@@ -37,51 +33,60 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void ShowStartMenu()
     {
-        PlayButtonClick();
-
-        if (audioSource != null)
-            audioSource.Stop();
-
-        Invoke(nameof(LoadGameScene), 0.2f);
+        if (startMenu != null) startMenu.SetActive(true);
+        if (levelMenu != null) levelMenu.SetActive(false);
+        if (settingMenu != null) settingMenu.SetActive(false);
     }
 
-    void LoadGameScene()
+    public void OpenLevelMenu()
     {
-        SceneManager.LoadScene("ApartmentEscape");
+        PlayClickSound();
+
+        if (startMenu != null) startMenu.SetActive(false);
+        if (levelMenu != null) levelMenu.SetActive(true);
+        if (settingMenu != null) settingMenu.SetActive(false);
     }
 
     public void OpenSettings()
     {
-        PlayButtonClick();
+        PlayClickSound();
 
-        if (startMenu != null)
-            startMenu.SetActive(false);
-
-        if (settingMenu != null)
-            settingMenu.SetActive(true);
+        if (startMenu != null) startMenu.SetActive(false);
+        if (levelMenu != null) levelMenu.SetActive(false);
+        if (settingMenu != null) settingMenu.SetActive(true);
     }
 
-    public void BackToMenu()
+    public void BackToMainMenu()
     {
-        PlayButtonClick();
+        PlayClickSound();
+        ShowStartMenu();
+    }
 
-        if (settingMenu != null)
-            settingMenu.SetActive(false);
+    public void LoadStayHomeScene()
+    {
+        PlayClickSound();
+        SceneManager.LoadScene("ApartmentStay");
+    }
 
-        if (startMenu != null)
-            startMenu.SetActive(true);
+    public void LoadEscapeScene()
+    {
+        PlayClickSound();
+        SceneManager.LoadScene("ApartmentEscape");
+    }
+
+    public void LoadFireExtinguishScene()
+    {
+        PlayClickSound();
+        SceneManager.LoadScene("Fire Extinguish");
     }
 
     public void QuitGame()
     {
-        PlayButtonClick();
-
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
+        PlayClickSound();
         Application.Quit();
-#endif
+        UnityEditor.EditorApplication.isPlaying = false;
+
     }
 }

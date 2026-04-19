@@ -63246,8 +63246,8 @@ MonoBehaviour:
   open: 0
   interactDistance: 5
   doorAudioSource: {fileID: 368001671}
-  openSound: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
-  closeSound: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
+  openSound: {fileID: 8300000, guid: 482a346b0c9e4764a88f034771346f78, type: 3}
+  closeSound: {fileID: 8300000, guid: bc48db7986bf97d47b06dcba8bcdda38, type: 3}
 --- !u!82 &368001671
 AudioSource:
   m_ObjectHideFlags: 0
@@ -78981,8 +78981,8 @@ MonoBehaviour:
   open: 0
   interactDistance: 15
   doorAudioSource: {fileID: 469814688}
-  openSound: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
-  closeSound: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
+  openSound: {fileID: 8300000, guid: 482a346b0c9e4764a88f034771346f78, type: 3}
+  closeSound: {fileID: 8300000, guid: bc48db7986bf97d47b06dcba8bcdda38, type: 3}
 --- !u!95 &469814683
 Animator:
   serializedVersion: 7
@@ -176625,10 +176625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb22b1c00dbcc7459527153a363eb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  dialingSound: {fileID: 8300000, guid: 5ffbc631dbe652e459195c1edfe97b69, type: 3}
-  fireBrigadeResponse: {fileID: 8300000, guid: 10dae88bca0660046a8bd6d3696957f2, type: 3}
-  playerResponse: {fileID: 8300000, guid: f9aca75878feba541a4fbd351dffe8ff, type: 3}
-  hangUpBeep: {fileID: 8300000, guid: 08c9a3cf6b83d2b40bed1d0f6288ed03, type: 3}
+  dialingSound: {fileID: 8300000, guid: 0147441df2c686a45b3a443de7c4d37c, type: 3}
+  fireBrigadeResponse: {fileID: 8300000, guid: d0038a8c533d04b46a510000ca391020, type: 3}
+  playerResponse: {fileID: 8300000, guid: a162bd9878199ce4cbcd71625dfe6b39, type: 3}
+  hangUpBeep: {fileID: 8300000, guid: 940ca0fa1bf35a94ba45d0d77253d477, type: 3}
   grabSound: {fileID: 8300000, guid: 593c1da2e8800bf4494e0dd60ff5b7e2, type: 3}
   completeUIManager: {fileID: 1781014477}
 --- !u!114 &1054451044
@@ -177975,12 +177975,12 @@ PrefabInstance:
         type: 3}
       propertyPath: openSound
       value: 
-      objectReference: {fileID: 8300000, guid: a13e9fb439840134f931856925abaa76, type: 3}
+      objectReference: {fileID: 8300000, guid: 482a346b0c9e4764a88f034771346f78, type: 3}
     - target: {fileID: 4929668019831370810, guid: f3e82dc7c471ff447b3ca0e0bfded076,
         type: 3}
       propertyPath: closeSound
       value: 
-      objectReference: {fileID: 8300000, guid: 9d08c715ce8b32a4694dd86004abd62e, type: 3}
+      objectReference: {fileID: 8300000, guid: bc48db7986bf97d47b06dcba8bcdda38, type: 3}
     - target: {fileID: 4929668019831370810, guid: f3e82dc7c471ff447b3ca0e0bfded076,
         type: 3}
       propertyPath: doorAudioSource
@@ -300449,7 +300449,7 @@ MonoBehaviour:
   nextSceneName: NextScene
   audioSource: {fileID: 1781014479}
   completeSound: {fileID: 8300000, guid: f24d0e61fe27de141a74d259a6afa735, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: 5a2f767a6abae124f95cc739ef53d1f5, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 9dec4bde313ff57489fcc575936dfef3, type: 3}
 --- !u!4 &1781014478
 Transform:
   m_ObjectHideFlags: 0
