@@ -27,14 +27,21 @@ public class FireExtinguisher : MonoBehaviour
         if (!device.isValid)
             device = InputDevices.GetDeviceAtXRNode(controllerNode);
 
-        bool triggerPressed;
-        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out triggerPressed))
+        bool triggerPressed = false;
+        bool mousePressed = Input.GetMouseButton(0); // Left click
+
+        if (device.TryGetFeatureValue(CommonUsages.triggerButton, out bool vrTrigger))
         {
-            if (triggerPressed)
-                StartSpray();
-            else
-                StopSpray();
+            triggerPressed = vrTrigger;
         }
+
+
+        bool isPressing = triggerPressed || mousePressed;
+
+        if (isPressing)
+            StartSpray();
+        else
+            StopSpray();
     }
 
     public void StartSpray()

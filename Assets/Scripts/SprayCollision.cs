@@ -3,7 +3,7 @@ using UnityEngine;
 public class SprayCollision : MonoBehaviour
 {
     public FireExtinguisher extinguisher;
-    public float extinguishPower = 0.5f;
+    public float extinguishPower = 1f;
 
     void OnParticleCollision(GameObject other)
     {

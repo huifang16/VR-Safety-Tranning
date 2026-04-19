@@ -6,11 +6,18 @@ public class Fire : MonoBehaviour
     public List<string> allowedExtinguisherTypes;
     public float health = 5f;
 
+    public AudioSource audioSource;
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+
     private ParticleSystem[] fireParticles; // ALL particle systems
+
+    private bool hasPlayedCorrectSound = false;
+
+    private bool hasReported = false;
 
     void Awake()
     {
-        // Get all particle systems in this object + children
         fireParticles = GetComponentsInChildren<ParticleSystem>();
     }
 
@@ -18,8 +25,13 @@ public class Fire : MonoBehaviour
     {
         if (allowedExtinguisherTypes.Contains(extinguisherType))
         {
+            if (!hasPlayedCorrectSound && audioSource != null && correctSound != null)
+            {
+                audioSource.PlayOneShot(correctSound);
+                hasPlayedCorrectSound = true;
+            }
+
             health -= amount;
-            Debug.Log("Correct extinguisher. Health: " + health);
 
             if (health <= 0)
             {
@@ -28,23 +40,32 @@ public class Fire : MonoBehaviour
         }
         else
         {
+            if (audioSource != null && wrongSound != null && !audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(wrongSound);
+            }
             Debug.Log("Wrong extinguisher: " + extinguisherType);
         }
     }
 
     void Extinguish()
     {
-        Debug.Log("Fire extinguished!");
-
-        
         foreach (ParticleSystem ps in fireParticles)
         {
-            if (ps != null)
-            {
-                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            }
+            ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
+
         gameObject.SetActive(false);
-        FindObjectOfType<GameManager>().FireExtinguished();
+    }
+
+    void OnDisable()
+    {
+        if (hasReported) return;
+        hasReported = true;
+
+        if (FireGameManager.Instance != null)
+        {
+            FireGameManager.Instance.FirePutOut();
+        }
     }
 }
